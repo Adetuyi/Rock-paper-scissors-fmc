@@ -35,11 +35,21 @@ function play(x){
     if((playerMove == paper && computerMove == rock) || (playerMove == rock && computerMove == scissors) || (playerMove == scissors && computerMove == paper)){
         state = "you win";
         status.innerHTML = state;
+    }else if((playerMove == paper && computerMove == paper) || (playerMove == rock && computerMove == rock) || (playerMove == scissors && computerMove == scissors)){
+        state = "draw";
+        status.innerHTML = state;
     }else{
         state = "you lose";
         status.innerHTML = state;
     }
-    state == 'you win' ? counter++ : counter--;
+    switch(state){
+        case "you win": 
+            counter++;
+            break;
+        case "you lose": 
+            counter--;
+            break;
+    }
     if(counter < 0){counter = 0};
     score.innerHTML = counter;
 
