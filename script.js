@@ -35,13 +35,7 @@ function play(x){
     if((playerMove == paper && computerMove == rock) || (playerMove == rock && computerMove == scissors) || (playerMove == scissors && computerMove == paper)){
         state = "you win";
         status.innerHTML = state;
-    }else if((playerMove == paper && computerMove == paper) || (playerMove == rock && computerMove == rock) || (playerMove == scissors && computerMove == scissors){
-
- 
-state = "Draw";
-        status.innerHTML = state;
-}
-else{
+    }else{
         state = "you lose";
         status.innerHTML = state;
     }
