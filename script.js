@@ -37,7 +37,7 @@ function play(x){
         status.innerHTML = state;
     }else if((playerMove == paper && computerMove == paper) || (playerMove == rock && computerMove == rock) || (playerMove == scissors && computerMove == scissors){
 
-     {
+ 
 state = "Draw";
         status.innerHTML = state;
 }
