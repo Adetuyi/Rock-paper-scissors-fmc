@@ -5,20 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
+  <script src="script.js" defer></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -26,12 +18,82 @@
   </style>
 </head>
 <body>
+  <main>
+    <section class="head">
+
+      <img src="images/logo.svg" alt="">
+
+      <div class="score-tab">
+        <p>Score</p>
+        <span id="score">0</span>
+      </div>
+
+    </section>
 
 
+    <section class="game" id="game">
+
+      <div class="paper" onclick="play(0)">
+        <div>
+          <img src="images/icon-paper.svg" alt="">
+        </div>
+      </div>
+      <div class="scissors" onclick="play(1)">
+        <div>
+          <img src="images/icon-scissors.svg" alt="">
+        </div>
+      </div>
+      <div class="rock" onclick="play(2)">
+        <div>
+          <img src="images/icon-rock.svg" alt="">
+        </div>
+      </div>
+      
+      <img src="images/bg-triangle.svg" alt="" class="triangle">
+
+    </section>
+
+    <section id="rules-section" class="hide">
+
+      <div class="rules">
+        
+        <h1>Rules</h1>
+        <img src="images/icon-close.svg" alt="" id="close">
+        <img src="images/image-rules.svg" alt="" class="rules-img">
+
+      </div>
   
+    </section>
+
+  <section class="play hide" id="play">
+
+    <div class="picked">
+      <p class="u-picked">You Picked</p>
+      <p class="c-picked">The House Picked</p>
+      <div class="u-item" id="user">
+      </div>
+      <div class="c-item" id="computer">
+      </div>
+      <div class="next">
+        <h1 id="status">You Lose</h1>
+        <button id="again">Play Again</button>
+      </div>
+
+    </div>
+  </section>
+    <a href="#rules-section"><button id="rules-btn">rules</button></a>
+<br><br><br><br><br>
+
+
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Adetuyi" target="_blank">Adetuyi Oluwaseyi Tolulope</a>.
   </div>
+
+
+  </main>
+
+  
 </body>
 </html>
